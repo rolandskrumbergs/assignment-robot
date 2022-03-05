@@ -11,7 +11,7 @@ public class Robot
         _instructions = instructions;
         _cleanedPoints = new List<Point>
         {
-            _instructions.StartingPoint
+            instructions.StartingPoint
         };
     }
 
@@ -21,7 +21,7 @@ public class Robot
 
         for (int i = 0; i < _instructions.AmountOfInstructions; i++)
         {
-            var pointsToMove = GetNextPoints(position, _instructions.Steps[i]);
+            var pointsToMove = GetNextPoints(position, _instructions.Steps.ElementAt(i));
 
             position = pointsToMove.Last();
 
